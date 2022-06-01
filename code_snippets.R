@@ -39,4 +39,9 @@ for(n in len(vec){  #forloop with length of the vec in consid
         clm1   %in% 0:10 ~ "0-10%",
         clm2   %in% 10:20 ~ "10-20%",
         clm3   %in% 20:30 ~ "20-30%"
-
+#create an empty df
+df <- data.frame(Column1 = character(), 
+                     column2 = character())
+    Column1 <- c(NA)
+    column2 <- c(NA)
+    df_na <- data.frame(column1, column2)
