@@ -21,7 +21,7 @@ for(i in some_vec){
   emty_vec <- c(somefucn of i)   
 }
 
-for(n in len(vec){  #forloop with length of the vec in consid
+for(n in 1:len(vec){  #forloop with length of the vec in consid
   vec1[n]
 }
     
