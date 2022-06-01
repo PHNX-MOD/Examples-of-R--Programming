@@ -31,4 +31,12 @@ for(n in len(vec){  #forloop with length of the vec in consid
    data%>%
     mutate(clm = ifelse(is.na(!!sym(colmn1)), mean(!!sym(colmn1), na.rm=TRUE), !!sym(colmn1))) #colmn1 will be used a strng when using this func 
  }
-   
+ 
+#case when
+
+ mutate(
+      newclm= case_when(
+        clm1   %in% 0:10 ~ "0-10%",
+        clm2   %in% 10:20 ~ "10-20%",
+        clm3   %in% 20:30 ~ "20-30%"
+
