@@ -45,3 +45,27 @@ df <- data.frame(Column1 = character(),
     Column1 <- c(NA)
     column2 <- c(NA)
     df_na <- data.frame(column1, column2)
+        
+        
+ #ggplot with grids       #also check out cowplots for plot_grids
+ data_to_plot <- function(lge, w_t, chosen_side1, chosen_side2, bpv){
+  rbind(league_plot(lge, w_t, chosen_side1, bpv),
+        league_plot(lge, w_t, chosen_side2, bpv))%>%
+    ggplot(aes(MTG, bpv, colour=ChosenSide))+
+    geom_line(size=1)+
+    theme_minimal()+
+    labs(title = wager_type)+facet_grid(.~qtr, scales = "free")+          #qtr is case when divide for grids
+    ggtitle(paste0(lge," ",wager_type," ",bpv ))+
+    theme(axis.title.x = element_text(colour = "DarkGreen", size=12),
+          axis.title.y = element_text(colour = "blue", size=12),
+          axis.text.x = element_text(size=10),
+          axis.text.y = element_text(size=10),
+          plot.title = element_text(colour = 'DarkBlue',
+                                    size = 20,
+                                    family ='Courier',
+                                    hjust = 0.5)
+    )
+}
+        
+        
+ 
