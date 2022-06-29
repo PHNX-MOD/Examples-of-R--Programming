@@ -1,3 +1,8 @@
+#filter from list 
+
+mtcars %>% 
+  filter(cyl %in% c(4, 6))
+
 # Replace NA with values in another row of same column for each group in r
 
 x %>%
