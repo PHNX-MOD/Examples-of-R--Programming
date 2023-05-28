@@ -24,9 +24,9 @@ shinyUI(fluidPage(
     
     dashboardSidebar(
       sidebarMenu(
-        menuItem("Basketball", tabName = "basketabll"),
-        menuItem("Customer",  tabName = "customer"),
-        menuItem("Rnd Pull", tabName = "qckAna"),
+        menuItem("Boom", tabName = "Boom "),
+        menuItem("Cus",  tabName = "Cus"),
+        menuItem("pull", tabName = "qckAna"),
         menuItem("Data", tabName = "data")),
       width=110),
     
@@ -40,7 +40,7 @@ shinyUI(fluidPage(
         tabItem(tabName = "basketabll",
                 #========================================1st tab item ======================================
                 
-                p("Select 'Select Input Date' or 'Select Weeks/Months' and click search here first"),
+                p("select"),
                 
                 fluidRow(
                   
@@ -87,8 +87,8 @@ shinyUI(fluidPage(
         tabItem(tabName = "customer",
                 #================================2nd tabitem=========================================
                 
-                fluidRow(h2("Customer Analysis", style = "color:black; text-align:center"),
-                         p("Input customer here or select the customer(row) from customer performance table in the Basketball section",
+                fluidRow(h2("Cus", style = "color:black; text-align:center"),
+                         p("csbbs",
                            style = "color:black; text-align:center")),
                 hr(style = "border-top: 1px solid #000000;"),
                 
