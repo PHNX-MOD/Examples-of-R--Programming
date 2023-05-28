@@ -122,7 +122,7 @@ shinyUI(fluidPage(
         
         #============================================quick analysis==================================
         tabItem(tabName = 'qckAna',
-                h1("Pull data from rnd::sql"),
+                h1("scbsdbc"),
                 fluidRow(
                   column(5,
                         
