@@ -110,6 +110,18 @@ server <- function(input, output) {
 }
 
 shinyApp(ui, server)
+        
+        
+ #use the inputs from the UI directly into the function, no need to add it as a argument in the function
+ 
+        #selectInput("Select1", c("Blue", "Red", "White"))
+        
+function(){
+df%>%filter(!!!syms(input$Select1) == "Blue")  
+}
+  
+        
+
        
  
         
