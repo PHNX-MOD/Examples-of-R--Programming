@@ -72,5 +72,64 @@ df <- data.frame(Column1 = character(),
     )
 }
         
+
+#color coded datatable using 'formatstyle' and adding curreny using 'formayCurrency()' function is used to format all columns of the datatable as currency values.   
+        
+library(shiny)
+library(DT)
+
+ui <- fluidPage(
+  dataTableOutput("mytable")
+)
+
+server <- function(input, output) {
+  output$mytable <- renderDataTable({
+    # Example data
+    df <- data.frame(
+      Column1 = c(-1, 0, 1, 2, -3),
+      Column2 = c(5, 10, 8, -2, 4)
+    )
+    
+    datatable(df) %>%
+      formatCurrency(
+        colnames(df),
+        currency = "$",
+        interval = 0,
+        mark = ","
+      )%>%
+      formatStyle(
+        'Column1',
+        color = styleInterval(0, c('red', 'green')),
+        fontWeight = styleInterval(0, c('normal', 'bold')))%>%
+          formatStyle(
+            'Column2',
+            color = styleInterval(0, c('red', 'green'))
+          
+      )
+  })
+}
+
+shinyApp(ui, server)
+       
+ 
+        
+ 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
  
